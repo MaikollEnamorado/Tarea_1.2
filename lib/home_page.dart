@@ -11,13 +11,15 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(),
         body: Column(
           children: [
             Text(
               'Welcome to Reminders',
               style: TextStyle(
-                fontSize: 40
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
               ),
               textAlign: TextAlign.center,
             ),
@@ -29,10 +31,8 @@ class _HomePageState extends State<HomePage> {
                   size: 50,
                   color: Colors.green),
                 Expanded(                  
-                  child: Column(
-                    //mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    //mainAxisSize: MainAxisSize.min,
+                  child: Column(                    
+                    crossAxisAlignment: CrossAxisAlignment.start,                    
                     children: [
                       Text('Quick Creation',                        
                         style: TextStyle(fontWeight: FontWeight.bold),
@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
                       Text(
                         'Simply type in your list, ask Siri, or add a reminder from your Calendar app.',
                         style: TextStyle(fontWeight: FontWeight.w300),
-                      ),                      
+                      ),
                     ],
                   ),
                 )
@@ -54,10 +54,8 @@ class _HomePageState extends State<HomePage> {
                   size: 50,
                   color: Colors.greenAccent),
                 Expanded(                  
-                  child: Column(
-                    //mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    //mainAxisSize: MainAxisSize.min,
+                  child: Column(                    
+                    crossAxisAlignment: CrossAxisAlignment.start,                    
                     children: [
                       Text('Grocery Shopping',                        
                         style: TextStyle(fontWeight: FontWeight.bold),
@@ -80,9 +78,7 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.yellow),
                 Expanded(                  
                   child: Column(
-                    //mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    //mainAxisSize: MainAxisSize.min,
                     children: [
                       Text('Easy Sharing',                        
                         style: TextStyle(fontWeight: FontWeight.bold),
@@ -104,10 +100,8 @@ class _HomePageState extends State<HomePage> {
                   size: 50,
                   color: Colors.blue),
                 Expanded(                  
-                  child: Column(
-                    //mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    //mainAxisSize: MainAxisSize.min,
+                  child: Column(                    
+                    crossAxisAlignment: CrossAxisAlignment.start,                    
                     children: [
                       Text('Powerful Organization',                        
                         style: TextStyle(fontWeight: FontWeight.bold),
@@ -124,7 +118,20 @@ class _HomePageState extends State<HomePage> {
             ),            
           ],
         ),
-      floatingActionButton: FloatingActionButton(onPressed: (){}),
-      );
+      floatingActionButton: SizedBox(
+        width: 330,
+        child: FloatingActionButton(
+          backgroundColor: Colors.blue[700],
+          onPressed: (){},
+          child: Text(
+            'Continue',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
