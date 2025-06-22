@@ -21,11 +21,13 @@ class _HomePageState extends State<HomePage> {
               ),
               textAlign: TextAlign.center,
             ),
+            SizedBox(height: 16,),
             Row(              
               children: [
                 Icon(
-                  Icons.abc,
-                  size: 50,),
+                  Icons.arrow_forward,
+                  size: 50,
+                  color: Colors.green),
                 Expanded(                  
                   child: Column(
                     //mainAxisAlignment: MainAxisAlignment.start,
@@ -36,7 +38,7 @@ class _HomePageState extends State<HomePage> {
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        'Simply type in your list, ask Siri, or add a reminder from your Calendar app',
+                        'Simply type in your list, ask Siri, or add a reminder from your Calendar app.',
                         style: TextStyle(fontWeight: FontWeight.w300),
                       ),                      
                     ],
@@ -44,22 +46,24 @@ class _HomePageState extends State<HomePage> {
                 )
               ],
             ),
+            SizedBox(height: 16,),
             Row(              
               children: [
                 Icon(
-                  Icons.abc,
-                  size: 50,),
+                  Icons.eco_sharp,
+                  size: 50,
+                  color: Colors.greenAccent),
                 Expanded(                  
                   child: Column(
                     //mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     //mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text('Quick Creation',                        
+                      Text('Grocery Shopping',                        
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        'Simply type in your list, ask Siri, or add a reminder from your Calendar app',
+                        'Create a Grocery List that automatically sorts items you add by category.',
                         style: TextStyle(fontWeight: FontWeight.w300),
                       ),                      
                     ],
@@ -67,22 +71,50 @@ class _HomePageState extends State<HomePage> {
                 )
               ],
             ),
+            SizedBox(height: 16,),
             Row(              
               children: [
                 Icon(
-                  Icons.abc,
-                  size: 50,),
+                  Icons.people,
+                  size: 50,
+                  color: Colors.yellow),
                 Expanded(                  
                   child: Column(
                     //mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     //mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text('Quick Creation',                        
+                      Text('Easy Sharing',                        
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        'Simply type in your list, ask Siri, or add a reminder from your Calendar app',
+                        'Collaborate on a list, and even assign individual tasks.',
+                        style: TextStyle(fontWeight: FontWeight.w300),
+                      ),                      
+                    ],
+                  ),
+                )
+              ],
+            ),
+            SizedBox(height: 16,),
+            Row(              
+              children: [
+                Icon(
+                  Icons.dashboard,
+                  size: 50,
+                  color: Colors.blue),
+                Expanded(                  
+                  child: Column(
+                    //mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    //mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text('Powerful Organization',                        
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        'Create new lists to match your needs, categorize reminders with tags, and'
+                        'manage reminders around your work flow with Smart List.',
                         style: TextStyle(fontWeight: FontWeight.w300),
                       ),                      
                     ],
@@ -92,7 +124,7 @@ class _HomePageState extends State<HomePage> {
             ),            
           ],
         ),
-      
+      floatingActionButton: FloatingActionButton(onPressed: (){}),
       );
   }
 }
